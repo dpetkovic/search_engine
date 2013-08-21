@@ -1,3 +1,12 @@
+
+def getPage(url):
+	try:
+		import urllib
+		return(urllib.urlopen(url).read())
+	except:
+		return('40 Page Not Found')
+
+
 def get_next_target(page):
     start_link = page.find('<a href=')
     if start_link == -1:

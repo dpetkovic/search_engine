@@ -1,0 +1,16 @@
+index = []
+
+
+def add_to_index(index,keyword,url):
+    for entry in index:
+        if entry[0] == keyword:
+            entry[1].append(url)
+            return
+    index.append([keyword,[url]])
+
+def add_page_to_index(index,url,content):
+    list_of_words = content.split()
+    for word in list_of_words:
+        index.append([word, [url]])
+
+print index
